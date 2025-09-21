@@ -67,7 +67,7 @@ app.post("/delete", async (req, res) => {
     const listName = req.body.listName;
 
     if (listName === "Today") {
-        await Item.findByIdAndRemove(checkedItemId);
+        await Item.findByIdAndDelete(checkedItemId);
         res.redirect("/");
     } else {
         await List.findOneAndUpdate(
