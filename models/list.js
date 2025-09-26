@@ -1,10 +1,13 @@
+// models/list.js
+
 const mongoose = require("mongoose");
-const { itemSchema } = require("./item"); // Assuming item schema is exported from item.js
+// This line now works because item.js is exporting itemSchema
+const { itemSchema } = require("./item");
 
 const listSchema = new mongoose.Schema({
   name: String,
-  items: [itemSchema],
-  userId: { // Add this field
+  items: [itemSchema], // Mongoose now receives the valid schema
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
