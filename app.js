@@ -9,7 +9,7 @@ const _ = require("lodash");
 
 // ----- MODELS -----
 const User = require('./models/user');
-const Item = require("./models/item"); // Use .model if you exported the model
+const Item = require("./models/item").Item; // Use .model if you exported the model
 const List = require("./models/list");
 
 const app = express();
