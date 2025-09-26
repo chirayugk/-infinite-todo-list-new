@@ -1,7 +1,17 @@
-const mongoose = require("mongoose");
+// models/item.js
 
+const mongoose = require('mongoose');
+
+// 1. Define the schema
 const itemSchema = new mongoose.Schema({
-    name: String
+  name: {
+    type: String,
+    required: true
+  }
 });
 
-module.exports = mongoose.model("Item", itemSchema);
+// 2. Create the model
+const Item = mongoose.model('Item', itemSchema);
+
+// 3. Export both the model and the schema
+module.exports = { Item, itemSchema };
