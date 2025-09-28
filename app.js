@@ -7,7 +7,11 @@ const passport = require('passport');
 
 // ----- MODELS -----
 const User = require('./models/user');
+<<<<<<< HEAD
 const { Item } = require("./models/item");
+=======
+const Item = require("./models/item").Item; // Use .model if you exported the model
+>>>>>>> 712b1de4796528022d8440cdc44957d608912e8c
 const List = require("./models/list");
 
 const app = express();
