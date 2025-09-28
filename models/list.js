@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-const { itemSchema } = require("./item"); // Assuming item schema is exported from item.js
+const { itemSchema } = require("./item");
 
 const listSchema = new mongoose.Schema({
   name: String,
   items: [itemSchema],
-  userId: { // Add this field
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
